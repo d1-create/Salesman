@@ -54,8 +54,13 @@ public class SalesManaging {
     }
 
     public class AddSalesman {
+        public static void AddSalesList(){
+
+        }
         
-        
+        public static void AddSalesFile(){
+            
+        }
     }
 
     
