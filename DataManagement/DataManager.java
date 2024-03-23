@@ -24,6 +24,7 @@ public class DataManager {
                 for(int i=0;i<sales.size();i++){
                     sum+=sales.get(i);
                 }
+                sum = (sum/sales.size());
             }
             catch(Exception e){
                 System.out.println("Error occured during arithmetic loop operation");
@@ -173,7 +174,7 @@ public class DataManager {
                 mean = Math.round(mean);
                 mean = Math.round(standard_deviation);
                 System.out.println("The Standard Deviation is: " + standard_deviation + " And the mean is: " + mean +
-                ". This means that 68% of all values lie between " + standard_deviation + " and " + mean);
+                ". This means that 68% of all values lie between " + (mean-standard_deviation) + " and " + (mean+standard_deviation));
             }
         }
     }
