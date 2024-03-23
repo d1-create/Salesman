@@ -5,9 +5,7 @@ import java.util.ArrayList;
 public class DataManager {
     //do all functions
     public static void DoAll(ArrayList<Integer> sales, ArrayList<String> names){
-        ArrayList<Integer> CumulativeFreqList = new ArrayList<Integer>();
         BasicFormulae.AllBasicForm(sales,names);
-        CumulativeFreqList = AdvancedFormulae.CumFreq(sales, true);
         AdvancedFormulae.AdvancedAll(sales, names);
     }
     //basic min,max,avg - range (not median) formulas
@@ -117,6 +115,7 @@ public class DataManager {
         //Do all Advanced Formulae formulas and prin all of it out
         public static void AdvancedAll(ArrayList<Integer> sales, ArrayList<String> names){
             CumFreq(sales, false);
+            StandardDeviation(sales);
         }
 
         public static ArrayList<Integer> CumFreq(ArrayList<Integer> sales, boolean ReturnOnly){
@@ -133,7 +132,7 @@ public class DataManager {
                 e.printStackTrace();
             }
             finally{
-                if(ReturnOnly == true){
+                if(ReturnOnly){
                     System.out.println("Below will show you the cumulative frequency");
                     for(int i=0; i<SortedList.size();i++){
                         System.out.print(SortedList.get(i) +",");
@@ -141,6 +140,39 @@ public class DataManager {
                 }
             }
             return SortedList;
+        }
+
+        //Checked and tested standard Deviation Function
+        public static void StandardDeviation(ArrayList<Integer> sales){
+            double standard_deviation = 0.0;
+            double mean = 0.0;
+            try{
+                //create average
+                double num_values = sales.size();
+                double sum = 0;
+                for(int i=0;i<sales.size();i++){
+                    sum+=sales.get(i);
+                }
+                mean = (sum/num_values);
+                //get variance
+                double variance = 0.0;
+                double variance_sum_var = 0.0;
+                for(int i=0;i<sales.size();i++){
+                    double a = (sales.get(i) - mean);
+                    a = Math.pow(a, 2);
+                    variance_sum_var+=a;
+                }
+                variance = (variance_sum_var/num_values);
+                standard_deviation = Math.sqrt(variance);
+            }
+            catch(Exception e){
+                System.out.println("Below find an error relatedf to the standard deviation formula");
+                e.printStackTrace();
+            }
+            finally{
+                System.out.println("The Standard Deviation is: " + standard_deviation + " And the mean is: " + mean +
+                " so 68% of all values lie between " +standard_deviation + " and " + mean);
+            }
         }
     }
     //make graphs and formulas to visualise them (GUI?)
