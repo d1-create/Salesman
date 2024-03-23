@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.management.MXBean;
+
 //BUGFIXED-CODE: TRUE
 public class FileManaging {
     
@@ -114,4 +116,68 @@ public class FileManaging {
             }
         }
 }
+
+    //remove a value from a file
+    public class RemoveFromFile{
+        //remove a string value from a file - TESTED WORKING
+        public static void RemoveStrFromFile(ArrayList<String> arraystr, String name, String path){
+            try{
+                System.out.println("Starting File Insertion Removal");
+                File file = new File(path);
+                FileWriter Writer = new FileWriter(file, false);
+                Writer.append("");
+                Writer.close();
+                FileWriter NewWriter = new FileWriter(file,true);
+                String temp_buffer = "";
+                for(int i=0;i<arraystr.size();i++){
+                    temp_buffer = arraystr.get(i);
+                    if(temp_buffer.equals(name)){
+                        ;
+                    }
+                    else{
+                        NewWriter.append(temp_buffer + "\n");
+                    }
+                }
+                NewWriter.close();
+
+            }
+            catch(Exception e){
+                System.out.println("Something went wrong - most likely an IOException");
+                e.printStackTrace();
+            }
+            finally{
+                System.out.println("Ended File Removal Insertion");
+            }
+        }
+
+        public static void RemoveIntFromFile(ArrayList<Integer> arrayint, int value, String path){
+            try{
+                System.out.println("Starting File Insertion Removal");
+                File file = new File(path);
+                FileWriter Writer = new FileWriter(file, false);
+                Writer.append("");
+                Writer.close();
+                FileWriter NewWriter = new FileWriter(file,true);
+                int temp_buffer = 0;
+                for(int i=0;i<arrayint.size();i++){
+                    temp_buffer = arrayint.get(i);
+                    if(temp_buffer == value){
+                        ;
+                    }
+                    else{
+                        NewWriter.append(temp_buffer + "\n");
+                    }
+                }
+                NewWriter.close();
+
+            }
+            catch(Exception e){
+                System.out.println("Something went wrong - most likely an IOException");
+                e.printStackTrace();
+            }
+            finally{
+                System.out.println("Ended File Removal Insertion");
+            }
+        }
+    }
 }

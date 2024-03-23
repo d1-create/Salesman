@@ -32,7 +32,7 @@ public class Main{
         }
         //Remove salesman to file and list
         if(mode==3){
-
+            FileManaging.RemoveFromFile.RemoveIntFromFile(sales_arr, 1512, "sales.txt");
         }
 
 
@@ -40,7 +40,6 @@ public class Main{
         input.close();
         //todo IN ORDER OF IMPORTANCE:
         /*
-         * ALLOW USER TO ENTER IF THEY WANT TO REMOVE A SALESMAN
          * ALLOW USER TO ENTER IF THEY WANT TO SEE THE MIN,AVG,MAX SALESMAN AND VALUES
          */
     }

@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 //BUG-FIXED CODE: TRUE
 public class SalesManaging {
-    //get the mode from this function
+    //get the menu mode from this function
     public static int GetMenuMode(Scanner sc){
         try{
             System.out.println("1-View Salesman\n2-Add Salesman\n3-Remove Salesman\n4-Salesman Data Overview\n");
