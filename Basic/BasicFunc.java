@@ -2,6 +2,7 @@ package Basic;
 
 import java.util.Scanner;
 
+//BUG-FIXED CODE: TRUE
 //get input with an input string and message
 public class BasicFunc {
     //class to Get input with a scanner - multiple types
