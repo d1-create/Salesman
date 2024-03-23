@@ -11,16 +11,17 @@ public class Main{
     public static ArrayList<String> names_arr = new ArrayList<String>();
     public static ArrayList<Integer> sales_arr = new ArrayList<Integer>();
 
-    public static String buffer = "";
     public static void main(String[] args){
         //startup file managing
         FileManaging.Startup(); //do startup tasks
         FileManaging.ReadFileToStringArr("names.txt", names_arr); //Startup convert to array
         FileManaging.ReadFileToIntegerArr("sales.txt", sales_arr); //Startup convert to array
-
+    
         int mode = SalesManaging.GetMenuMode();
 
         if(mode==1){
+            String name = "";
+            name = BasicFunc.getStringInput("Salesman Name: ");
             SalesManaging.ViewSalesman(names_arr, sales_arr, "Dirushan");
         }
         
