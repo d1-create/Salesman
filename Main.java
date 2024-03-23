@@ -31,7 +31,7 @@ public class Main{
             SalesManaging.AddSalesman(names_arr, sales_arr, Salesname, Sales);
         }
         //Remove salesman to file and list and then reconstruct the lists with new information
-        if(mode==3){
+        else if(mode==3){
             String Salesman = BasicFunc.GetInput.getStringInput("What salesman to remove from the list?", input);
             int index = FileManaging.RemoveFromFile.GetIndexStrArr(Salesman, names_arr);
             SalesManaging.RemoveSalesman(names_arr, sales_arr, Salesman, mode);
@@ -41,7 +41,10 @@ public class Main{
             System.out.println("Reconstructing Database...");
             FileManaging.Startup();
         }
+        //get data and graphs from the whole of the sales database
+        else if(mode==4){
 
+        }
 
         
         input.close();
