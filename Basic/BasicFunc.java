@@ -1,20 +1,15 @@
 package Basic;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 //get input with an input string and message
 public class BasicFunc {
-    public static String getStringInput(String message){
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static String getStringInput(String message, Scanner sc){
         System.out.print(message);
         String inputString = "";
-        try {
-            inputString = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        inputString = sc.next();
+
         return inputString;
     }
 }

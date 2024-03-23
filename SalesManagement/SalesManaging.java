@@ -5,22 +5,20 @@ import java.util.Scanner;
 
 public class SalesManaging {
     //get the mode from this function
-    public static int GetMenuMode(){
+    public static int GetMenuMode(Scanner sc){
         try{
             System.out.println("1-View Salesman\n2-Add Salesman\n3-Remove Salesman\n4-Salesman Data Overview\n");
-            Scanner input = new Scanner(System.in);
             int buffer_mode = 0;
 
             System.out.println("Mode must be above 0 and below 5, Enter below");
-            if(input.hasNextInt()){
-                buffer_mode = input.nextInt();
+            if(sc.hasNextInt()){
+                buffer_mode = sc.nextInt();
             }
 
             if(buffer_mode>4 || buffer_mode<1){
                 System.out.println("MODE OUT OF BOUNDS, QUITTING APPLICATION");
                 System.exit(0);
             }
-            input.close();
             return buffer_mode;
         }
         finally{
