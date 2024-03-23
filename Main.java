@@ -28,14 +28,15 @@ public class Main{
             int Sales = BasicFunc.GetInput.getIntInput("Money Made:", input);
             SalesManaging.AddSalesman(names_arr, sales_arr, Salesname, Sales);
         }
+        if(mode==3){
 
+        }
 
 
         
         input.close();
         //todo IN ORDER OF IMPORTANCE:
         /*
-         * ALLOW USER TO ENTER IF THEY WANT TO ADD A SALESMAN
          * ALLOW USER TO ENTER IF THEY WANT TO REMOVE A SALESMAN
          * ALLOW USER TO ENTER IF THEY WANT TO SEE THE MIN,AVG,MAX SALESMAN AND VALUES
          */
