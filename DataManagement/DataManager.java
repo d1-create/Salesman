@@ -7,9 +7,8 @@ public class DataManager {
     public static void DoAll(ArrayList<Integer> sales, ArrayList<String> names){
         ArrayList<Integer> CumulativeFreqList = new ArrayList<Integer>();
         BasicFormulae.AllBasicForm(sales,names);
-        AdvancedFormulae.AdvancedAll(sales, names);
         CumulativeFreqList = AdvancedFormulae.CumFreq(sales, true);
-        System.out.println(CumulativeFreqList + " Is the cumulative frequency list");
+        AdvancedFormulae.AdvancedAll(sales, names);
     }
     //basic min,max,avg - range (not median) formulas
     public class BasicFormulae{
@@ -18,6 +17,7 @@ public class DataManager {
             Average(sales);
             Smallest(names, sales);
             Highest(names, sales);
+            Range(sales);
         }
         //function to get average of sales
         public static void Average(ArrayList<Integer> sales){
@@ -85,6 +85,31 @@ public class DataManager {
             finally{
                 System.out.println("The Highest money bringer is:" + names.get(highest_index) + ", who made:£" + highest);
             }
+        }
+        //get the range of values and print it out
+        public static void Range(ArrayList<Integer> sales){
+            int highest = 0;
+            int lowest = 100000000;
+            try{
+                int temp_value_storage;
+                for(int i=0;i<sales.size();i++){
+                    temp_value_storage = sales.get(i);
+                    if(temp_value_storage > highest){
+                        highest = temp_value_storage;
+                    }
+                    if(temp_value_storage < lowest){
+                        lowest = temp_value_storage;
+                    }
+                }
+            }
+            catch(Exception e){
+                    System.out.println("Error happened in Range - Data Analyst ");
+                    e.printStackTrace();
+            }
+                finally{
+                    System.out.println("The Range of values is:£" + (highest-lowest));
+            }
+        
         }
     }
     //Advanced formulas such as spearmans rank and standard deviation
