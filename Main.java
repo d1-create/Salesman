@@ -23,7 +23,12 @@ public class Main{
             String name = BasicFunc.getStringInput("Salesman Name: ", input);
             SalesManaging.ViewSalesman(names_arr, sales_arr, name);
         }
+
+
+
+
         
+        input.close();
         //todo IN ORDER OF IMPORTANCE:
         /*
          * ALLOW USER TO ENTER IF THEY WANT TO ADD A SALESMAN

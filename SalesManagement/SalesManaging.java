@@ -53,5 +53,10 @@ public class SalesManaging {
 
     }
 
+    public class AddSalesman {
+        
+        
+    }
 
+    
 }
