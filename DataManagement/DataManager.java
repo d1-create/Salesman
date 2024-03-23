@@ -16,7 +16,7 @@ public class DataManager {
                 e.printStackTrace();
             }
             finally{
-                System.out.println("Calculated Average For SalesPeople");
+                System.out.println("Calculated Average For SalesPeople\n Average:" + sum);
             }
             return sum;
         }
