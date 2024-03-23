@@ -8,6 +8,7 @@ public class DataManager {
         public static void AllBasicForm(ArrayList<Integer> sales, ArrayList<String> names){
             Average(sales);
             Smallest(names, sales);
+            Highest(names, sales);
         }
         //function to get average of sales
         public static void Average(ArrayList<Integer> sales){
@@ -33,8 +34,9 @@ public class DataManager {
             try{
 
                 for(int i=0;i<sales.size();i++){
-                    if(sales.get(i) < lowest){
-                        lowest = sales.get(i);
+                    int sales_value_temp_var = sales.get(i);
+                    if(sales_value_temp_var < lowest){
+                        lowest = sales_value_temp_var;
                         lowest_index = i;
                     }
                     else{
@@ -49,6 +51,30 @@ public class DataManager {
             }
             finally{
                 System.out.println("The Lowest Earner is: " + names.get(lowest_index) + ", They made:£" + lowest);
+            }
+        }
+        //function to get the highest value and print the highest earner
+        public static void Highest(ArrayList<String> names,ArrayList<Integer> sales){
+            int highest = 0;
+            int highest_index = 0;
+            try{
+                for(int i=0;i<sales.size();i++){
+                    int efficency_var_sales = sales.get(i);
+                    if(efficency_var_sales > highest){
+                        highest = efficency_var_sales;
+                        highest_index = i;
+                    }
+                    else{
+                        ;
+                    }
+                }
+            }
+            catch(Exception e){
+                System.out.println("Error in Function - Finding highest value, look below for details ");
+                e.printStackTrace();
+            }
+            finally{
+                System.out.println("The Highest money bringer is:" + names.get(highest_index) + ", who made:£" + highest);
             }
         }
     }
