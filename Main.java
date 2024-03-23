@@ -24,7 +24,7 @@ public class Main{
             SalesManaging.ViewSalesman(names_arr, sales_arr, name);
         }
         if(mode==2){
-            
+            SalesManaging.AddSalesman(names_arr, sales_arr, "Pradium", 100);
         }
 
 
