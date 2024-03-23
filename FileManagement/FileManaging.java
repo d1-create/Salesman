@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//BUGFIXED-CODE: TRUE
 public class FileManaging {
     
     //on startup check for files and make them if not there
