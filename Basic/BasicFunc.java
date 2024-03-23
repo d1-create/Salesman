@@ -7,20 +7,37 @@ public class BasicFunc {
     //class to Get input with a scanner - multiple types
     public class GetInput{
         public static String getStringInput(String message, Scanner sc){
-            System.out.print(message);
-            String inputString = "";
+            String TempString = "";
+            try {
+                System.out.print(message);
 
-            inputString = sc.next();
-
-            return inputString;
+                TempString = sc.next();
+            } 
+            catch (Exception e) {
+                System.out.println("Something wen't wrong while handling the input!");
+                e.printStackTrace();
+            }
+            finally{
+                System.out.println("Printed");
+            }
+            return TempString;
         }
 
+
         public static int getIntInput(String message, Scanner sc){
-            System.out.print(message);
             int TempVar = 0;
+            try {
+                System.out.print(message);
 
-            TempVar = sc.nextInt();
-
+                TempVar = sc.nextInt();
+            } 
+            catch (Exception e) {
+                System.out.println("Something wen't wrong while handling the input!");
+                e.printStackTrace();
+            }
+            finally{
+                System.out.println("Printed");
+            }
             return TempVar;
         }
     }
