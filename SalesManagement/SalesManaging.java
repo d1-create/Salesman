@@ -5,6 +5,7 @@ import FileManagement.FileManaging;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//BUG-FIXED CODE: TRUE
 public class SalesManaging {
     //get the mode from this function
     public static int GetMenuMode(Scanner sc){
@@ -57,10 +58,19 @@ public class SalesManaging {
 
     //add a salesman by going through and adding a name and it's earning and amd adding it to the file
     public static void AddSalesman(ArrayList<String> names_list,ArrayList<Integer> sales_list, String Name, int Earnings){
-        names_list.add(Name);
-        sales_list.add(Earnings);
-        FileManaging.AddToFile.AddToFileStr("names.txt",Name,true);
-        FileManaging.AddToFile.AddToFileInt("sales.txt",Earnings,true);
+        try{
+            names_list.add(Name);
+            sales_list.add(Earnings);
+            FileManaging.AddToFile.AddToFileStr("names.txt",Name,true);
+            FileManaging.AddToFile.AddToFileInt("sales.txt",Earnings,true);
+        }
+        catch(Exception e){
+            System.out.println("Error occured when Adding Salesman: Most likely file error");
+            e.printStackTrace();
+        }
+        finally{
+            System.out.println("Added New SalesPerson!");
+        }
     }
 
 
