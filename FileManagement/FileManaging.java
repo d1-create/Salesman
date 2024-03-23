@@ -189,7 +189,7 @@ public class FileManaging {
             System.out.println("Ending File Insertion Removal");
         }
 
-
+        //remove integer from file using the index
         public static void RemoveIntFromFileUIndex(ArrayList<Integer> arrayint, int index, String path){
             System.out.println("Starting File Insertion Removal");
             try{
