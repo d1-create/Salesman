@@ -30,9 +30,12 @@ public class Main{
             int Sales = BasicFunc.GetInput.getIntInput("Money Made:", input);
             SalesManaging.AddSalesman(names_arr, sales_arr, Salesname, Sales);
         }
-        //Remove salesman to file and list
+        //Remove salesman to file and list and then reconstruct the lists with new information
         if(mode==3){
-            FileManaging.RemoveFromFile.RemoveIntFromFile(sales_arr, 1512, "sales.txt");
+            String Salesman = BasicFunc.GetInput.getStringInput("What salesman to remove from the list?", input);
+            SalesManaging.RemoveSalesman(names_arr, sales_arr, Salesman, mode);
+            System.out.println("Reconstructing Database...");
+            FileManaging.Startup();
         }
 
 
