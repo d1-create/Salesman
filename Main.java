@@ -44,7 +44,7 @@ public class Main{
         }
         //get data and graphs from the whole of the sales database
         else if(mode==4){
-            int sum = DataManager.BasicFormulae.Average(sales_arr);
+            int average_income = DataManager.BasicFormulae.Average(sales_arr);
         }
 
         
