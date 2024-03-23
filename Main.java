@@ -6,6 +6,8 @@ import DataManagement.DataManager;
 
 //imported libs
 import java.util.*;
+
+import javax.xml.crypto.Data;
 public class Main{
 
     //global variables
@@ -44,7 +46,7 @@ public class Main{
         }
         //get data and graphs from the whole of the sales database
         else if(mode==4){
-            DataManager.BasicFormulae.AllBasicForm(sales_arr, names_arr);
+            DataManager.DoAll(sales_arr, names_arr);
         }
         
         input.close();
