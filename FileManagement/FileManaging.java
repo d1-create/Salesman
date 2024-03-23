@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.management.MXBean;
-
 //BUGFIXED-CODE: TRUE
 public class FileManaging {
     
