@@ -1,5 +1,10 @@
 package SalesManagement;
 
+import FileManagement.FileManaging;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -53,15 +58,14 @@ public class SalesManaging {
 
     }
 
-    public class AddSalesman {
-        public static void AddSalesList(){
 
-        }
-        
-        public static void AddSalesFile(){
-            
-        }
+    public static void AddSalesman(ArrayList<String> names_list,ArrayList<Integer> sales_list, String Name, int Earnings){
+        names_list.add(Name);
+        sales_list.add(Earnings);
+        FileManaging.AddToFile.AddToFileStr("names.txt",Name,true);
+        FileManaging.AddToFile.AddToFileInt("sales.txt",Earnings,true);
     }
+
 
     
 }

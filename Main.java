@@ -1,7 +1,7 @@
 //imported code/java files
-import FileManagement.FileManaging;
-import SalesManagement.SalesManaging;
-import Basic.BasicFunc;
+import FileManagement.FileManaging; //manage files module
+import SalesManagement.SalesManaging; // manage sales management
+import Basic.BasicFunc; // basic functions
 
 //imported libs
 import java.util.*;
@@ -14,8 +14,8 @@ public class Main{
         Scanner input = new Scanner(System.in);
         //startup file managing
         FileManaging.Startup(); //do startup tasks
-        FileManaging.ReadFileToStringArr("names.txt", names_arr); //Startup convert to array
-        FileManaging.ReadFileToIntegerArr("sales.txt", sales_arr); //Startup convert to array
+        FileManaging.ReadToFile.ReadFileToStringArr("names.txt", names_arr); //Startup convert to array
+        FileManaging.ReadToFile.ReadFileToIntegerArr("sales.txt", sales_arr); //Startup convert to array
     
         int mode = SalesManaging.GetMenuMode(input);
 

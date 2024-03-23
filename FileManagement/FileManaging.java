@@ -33,30 +33,30 @@ public class FileManaging {
             System.out.println("System Startup Completed Sucessfully");
         }
     }
+    public class ReadToFile{
+        //read file to an arraylist of strings
+        public static void ReadFileToStringArr(String path, ArrayList<String> StringList){
+            try{
+                File Data = new File(path);
 
-    //read file to an arraylist of strings
-    public static void ReadFileToStringArr(String path, ArrayList<String> StringList){
-        try{
-            File Data = new File(path);
-
-            Scanner FileScanner = new Scanner(Data);
-            while (FileScanner.hasNextLine()) {
-                String buffer = FileScanner.nextLine();
-                StringList.add(buffer);
+                Scanner FileScanner = new Scanner(Data);
+                while (FileScanner.hasNextLine()) {
+                    String buffer = FileScanner.nextLine();
+                    StringList.add(buffer);
+                }
+                FileScanner.close();
             }
-            FileScanner.close();
+            catch (IOException e){
+                System.out.println("File Error");
+                e.printStackTrace();
+            }
+            finally{
+                System.out.println("Read file to Arraylist (type string)");
+            }
         }
-        catch (IOException e){
-            System.out.println("File Error");
-            e.printStackTrace();
-        }
-        finally{
-            System.out.println("Read file to Arraylist (type string)");
-        }
-    }
 
-    //read file to arraylist of integers
-    public static void ReadFileToIntegerArr(String path, ArrayList<Integer> IntList){
+        //read file to arraylist of integers
+        public static void ReadFileToIntegerArr(String path, ArrayList<Integer> IntList){
         try{
             File Data = new File(path);
 
@@ -76,22 +76,39 @@ public class FileManaging {
         }
     }
 
+}
+    public class AddToFile{
     //add some sort of message to a file (append not overwrite file)
-    public static void AddToFile(String path, String message){
-        try{
-            File New_File = new File(path);
-            FileWriter Writer = new FileWriter(New_File, true);
-            Writer.append(message + "\n");
-            Writer.close();
+        public static void AddToFileStr(String path, String message, boolean ShouldAppend){
+            try{
+                File New_File = new File(path);
+                FileWriter Writer = new FileWriter(New_File, ShouldAppend);
+                Writer.append(message + "\n");
+                Writer.close();
+            }
+            catch(IOException e){
+                System.out.println("File error found!");
+                e.printStackTrace();
+            }
+            finally{
+                System.out.println("added to file");
+            }
         }
-        catch(IOException e){
-            System.out.println("File error found!");
-            e.printStackTrace();
-        }
-        finally{
-            System.out.println("added to file");
-        }
-    }
 
-
+        public static void AddToFileInt(String path, int message, boolean ShouldAppend){
+            try{
+                File New_File = new File(path);
+                FileWriter Writer = new FileWriter(New_File, ShouldAppend);
+                Writer.append(message + "\n");
+                Writer.close();
+            }
+            catch(IOException e){
+                System.out.println("File error found!");
+                e.printStackTrace();
+            }
+            finally{
+                System.out.println("added to file");
+            }
+        }
+}
 }
