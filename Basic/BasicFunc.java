@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 //get input with an input string and message
 public class BasicFunc {
+    //class to Get input with a scanner - multiple types
     public class GetInput{
         public static String getStringInput(String message, Scanner sc){
             System.out.print(message);

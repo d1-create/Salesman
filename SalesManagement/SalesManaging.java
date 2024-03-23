@@ -28,7 +28,7 @@ public class SalesManaging {
         }
     }
 
-    //view a salesman
+    //view a salesman 
     public static void ViewSalesman(ArrayList<String> names_list,ArrayList<Integer> sales_list, String name){
         try{
             //create a string and parse through the for loop until the name is hit and print the data out while updating if it is found via the temp boolean
@@ -55,7 +55,7 @@ public class SalesManaging {
 
     }
 
-
+    //add a salesman by going through and adding a name and it's earning and amd adding it to the file
     public static void AddSalesman(ArrayList<String> names_list,ArrayList<Integer> sales_list, String Name, int Earnings){
         names_list.add(Name);
         sales_list.add(Earnings);

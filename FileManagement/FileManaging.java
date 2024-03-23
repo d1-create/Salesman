@@ -33,6 +33,7 @@ public class FileManaging {
             System.out.println("System Startup Completed Sucessfully");
         }
     }
+    //class with both functions to read a file into a list
     public class ReadToFile{
         //read file to an arraylist of strings
         public static void ReadFileToStringArr(String path, ArrayList<String> StringList){
@@ -77,6 +78,7 @@ public class FileManaging {
     }
 
 }
+    //add to file class with 2 types
     public class AddToFile{
     //add some sort of message to a file (append not overwrite file)
         public static void AddToFileStr(String path, String message, boolean ShouldAppend){
@@ -94,7 +96,7 @@ public class FileManaging {
                 System.out.println("added to file");
             }
         }
-
+        //add integer value to file
         public static void AddToFileInt(String path, int message, boolean ShouldAppend){
             try{
                 File New_File = new File(path);
