@@ -40,7 +40,7 @@ public class SalesManaging {
                 list_data_chosen = names_list.get(i);
 
                 if(list_data_chosen.equals(name)){
-                    System.out.println("Salesman Name: " + names_list.get(i) + "\nSalesman Sales: " + sales_list.get(i));
+                    System.out.println("Salesman Name: " + names_list.get(i) + "\nSalesman Sales:£" + sales_list.get(i));
                     TEMP_VAR_found = true;
                 }
             }
