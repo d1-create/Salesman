@@ -4,7 +4,10 @@ import java.util.ArrayList;
 
 public class DataManager {
     public class BasicFormulae{
-        public static int Average(ArrayList<Integer> sales){
+        public static void AllBasicForm(ArrayList<Integer> sales){
+            Average(sales);
+        }
+        public static void Average(ArrayList<Integer> sales){
             int sum = 0;
             try{
                 for(int i=0;i<sales.size();i++){
@@ -18,7 +21,6 @@ public class DataManager {
             finally{
                 System.out.println("Calculated Average For SalesPeople\n Average:£" + sum);
             }
-            return sum;
         }
     }
 }
