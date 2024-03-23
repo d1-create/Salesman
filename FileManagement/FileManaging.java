@@ -117,10 +117,24 @@ public class FileManaging {
 
     //remove a value from a file
     public class RemoveFromFile{
+        public static int GetIndexStrArr(String name,ArrayList<String> names){
+            int return_value = 0;
+            for(int i=0;i<names.size();i++){
+                if(name.equals(names.get(i))){
+                    return_value = i;
+                    break;
+                }
+                else{
+                    continue;
+                }
+            }
+
+            return return_value;
+        }
         //remove a string value from a file - TESTED WORKING
         public static void RemoveStrFromFile(ArrayList<String> arraystr, String name, String path){
+            System.out.println("Starting File Insertion Removal");
             try{
-                System.out.println("Starting File Insertion Removal");
                 File file = new File(path);
                 FileWriter Writer = new FileWriter(file, false);
                 Writer.append("");
@@ -143,14 +157,13 @@ public class FileManaging {
                 System.out.println("Something went wrong - most likely an IOException");
                 e.printStackTrace();
             }
-            finally{
-                System.out.println("Ended File Removal Insertion");
-            }
+            System.out.println("Ended File Removal Insertion");
+
         }
 
         public static void RemoveIntFromFile(ArrayList<Integer> arrayint, int value, String path){
+            System.out.println("Starting File Insertion Removal");
             try{
-                System.out.println("Starting File Insertion Removal");
                 File file = new File(path);
                 FileWriter Writer = new FileWriter(file, false);
                 Writer.append("");
@@ -173,9 +186,36 @@ public class FileManaging {
                 System.out.println("Something went wrong - most likely an IOException");
                 e.printStackTrace();
             }
-            finally{
-                System.out.println("Ended File Removal Insertion");
+            System.out.println("Ending File Insertion Removal");
+        }
+
+
+        public static void RemoveIntFromFileUIndex(ArrayList<Integer> arrayint, int index, String path){
+            System.out.println("Starting File Insertion Removal");
+            try{
+                File file = new File(path);
+                FileWriter Writer = new FileWriter(file, false);
+                Writer.append("");
+                Writer.close();
+                FileWriter NewWriter = new FileWriter(file,true);
+                int temp_buffer = 0;
+                for(int i=0;i<arrayint.size();i++){
+                    temp_buffer = arrayint.get(i);
+                    if(temp_buffer == arrayint.get(index)){
+                        ;
+                    }
+                    else{
+                        NewWriter.append(temp_buffer + "\n");
+                    }
+                }
+                NewWriter.close();
+
             }
+            catch(Exception e){
+                System.out.println("Something went wrong - most likely an IOException");
+                e.printStackTrace();
+            }
+            System.out.println("Ending File Insertion Removal");
         }
     }
 }

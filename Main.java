@@ -33,7 +33,11 @@ public class Main{
         //Remove salesman to file and list and then reconstruct the lists with new information
         if(mode==3){
             String Salesman = BasicFunc.GetInput.getStringInput("What salesman to remove from the list?", input);
+            int index = FileManaging.RemoveFromFile.GetIndexStrArr(Salesman, names_arr);
             SalesManaging.RemoveSalesman(names_arr, sales_arr, Salesman, mode);
+            FileManaging.RemoveFromFile.RemoveIntFromFileUIndex(sales_arr, index, "sales.txt");
+
+
             System.out.println("Reconstructing Database...");
             FileManaging.Startup();
         }
