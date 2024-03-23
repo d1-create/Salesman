@@ -23,7 +23,9 @@ public class Main{
             String name = BasicFunc.getStringInput("Salesman Name: ", input);
             SalesManaging.ViewSalesman(names_arr, sales_arr, name);
         }
-
+        if(mode==2){
+            
+        }
 
 
 
