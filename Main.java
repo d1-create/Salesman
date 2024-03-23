@@ -44,13 +44,15 @@ public class Main{
         }
         //get data and graphs from the whole of the sales database
         else if(mode==4){
-            DataManager.BasicFormulae.AllBasicForm(sales_arr);
+            DataManager.BasicFormulae.AllBasicForm(sales_arr, names_arr);
         }
         
         input.close();
         //todo IN ORDER OF IMPORTANCE:
         /*
-         * ALLOW USER TO ENTER IF THEY WANT TO SEE THE MIN,AVG,MAX SALESMAN AND VALUES
+         * ALLOW USER TO ENTER IF THEY WANT TO SEE THE MIN,AVG,MAX SALESMAN AND VALUES (BEING DONE)
+         * COMMENTS
+         * READABILITY
          */
     }
 }
