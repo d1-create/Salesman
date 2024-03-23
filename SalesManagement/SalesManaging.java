@@ -73,6 +73,21 @@ public class SalesManaging {
         }
     }
 
-
+    //remove a salesman by going to the Remove from file function
+    public static void RemoveSalesman(ArrayList<String> names, ArrayList<Integer> sales, String name, int Earnings){
+        try{
+            for(int i=0;i<names.size();i++){
+                FileManaging.RemoveFromFile.RemoveStrFromFile(names, name, "names.txt");
+                FileManaging.RemoveFromFile.RemoveIntFromFile(sales,Earnings,"sales.txt");
+            }
+        }
+        catch(Exception e){
+            System.out.println("ERROR occured when removing a salesman, please look at the stack trace below");
+            e.printStackTrace();
+        }
+        finally{
+            System.out.println("Removed a salesman");
+        }
+    }
     
 }
