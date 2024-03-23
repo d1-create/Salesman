@@ -24,21 +24,13 @@ public class SalesManaging {
             return buffer_mode;
         }
         finally{
-            System.out.println("\nMode Captured");
+            System.out.println("\nMode Captured\n");
         }
     }
 
     //view a salesman
-    public static void ViewSalesman(ArrayList<String> names_list,ArrayList<Integer> sales_list){
+    public static void ViewSalesman(ArrayList<String> names_list,ArrayList<Integer> sales_list, String name){
         try{
-            //create input scanner and get input
-            Scanner input = new Scanner(System.in);
-            String name = "N/A";
-            System.out.print("What is the name of the salesman you would like to view? ");
-            if(input.hasNext()){
-                name = input.next();
-            }
-            input.close();
             //create a string and parse through the for loop until the name is hit and print the data out while updating if it is found via the temp boolean
             String list_data_chosen = "";
             Boolean TEMP_VAR_found = false;
@@ -47,7 +39,7 @@ public class SalesManaging {
                 list_data_chosen = names_list.get(i);
 
                 if(list_data_chosen.equals(name)){
-                    System.out.println("Salesman Name: " + names_list.get(i) + " Salesman Sales: " + sales_list.get(i));
+                    System.out.println("Salesman Name: " + names_list.get(i) + "\nSalesman Sales: " + sales_list.get(i));
                     TEMP_VAR_found = true;
                 }
             }

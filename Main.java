@@ -1,6 +1,8 @@
 //imported code/java files
 import FileManagement.FileManaging;
 import SalesManagement.SalesManaging;
+import Basic.BasicFunc;
+
 //imported libs
 import java.util.*;
 public class Main{
@@ -9,6 +11,7 @@ public class Main{
     public static ArrayList<String> names_arr = new ArrayList<String>();
     public static ArrayList<Integer> sales_arr = new ArrayList<Integer>();
 
+    public static String buffer = "";
     public static void main(String[] args){
         //startup file managing
         FileManaging.Startup(); //do startup tasks
@@ -18,7 +21,7 @@ public class Main{
         int mode = SalesManaging.GetMenuMode();
 
         if(mode==1){
-            SalesManaging.ViewSalesman(names_arr, sales_arr);
+            SalesManaging.ViewSalesman(names_arr, sales_arr, "Dirushan");
         }
         
         //TODO IN ORDER OF IMPORTANCE:
