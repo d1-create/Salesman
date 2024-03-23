@@ -20,11 +20,13 @@ public class Main{
         int mode = SalesManaging.GetMenuMode(input);
 
         if(mode==1){
-            String name = BasicFunc.getStringInput("Salesman Name: ", input);
+            String name = BasicFunc.GetInput.getStringInput("Salesman Name: ", input);
             SalesManaging.ViewSalesman(names_arr, sales_arr, name);
         }
         if(mode==2){
-            SalesManaging.AddSalesman(names_arr, sales_arr, "Pradium", 100);
+            String Salesname = BasicFunc.GetInput.getStringInput("Salesman Name:", input);
+            int Sales = BasicFunc.GetInput.getIntInput("Money Made:", input);
+            SalesManaging.AddSalesman(names_arr, sales_arr, Salesname, Sales);
         }
 
 

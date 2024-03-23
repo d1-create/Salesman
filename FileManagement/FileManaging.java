@@ -63,7 +63,7 @@ public class FileManaging {
             Scanner FileScanner = new Scanner(Data);
             while (FileScanner.hasNextLine()) {
                 String buffer = FileScanner.nextLine();
-                IntList.add(Integer.valueOf(buffer));
+                IntList.add(Integer.parseInt(buffer));
             }
             FileScanner.close();
         }
