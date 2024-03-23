@@ -2,6 +2,7 @@
 import FileManagement.FileManaging; //manage files module
 import SalesManagement.SalesManaging; // manage sales management
 import Basic.BasicFunc; // basic functions
+import DataManagement.DataManager;
 
 //imported libs
 import java.util.*;
