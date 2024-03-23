@@ -170,8 +170,10 @@ public class DataManager {
                 e.printStackTrace();
             }
             finally{
+                mean = Math.round(mean);
+                mean = Math.round(standard_deviation);
                 System.out.println("The Standard Deviation is: " + standard_deviation + " And the mean is: " + mean +
-                " so 68% of all values lie between " +standard_deviation + " and " + mean);
+                ". This means that 68% of all values lie between " + standard_deviation + " and " + mean);
             }
         }
     }
