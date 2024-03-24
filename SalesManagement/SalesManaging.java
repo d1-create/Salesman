@@ -8,7 +8,7 @@ import java.util.Scanner;
 //BUG-FIXED CODE: TRUE
 public class SalesManaging {
     //get the menu mode from this function
-    public static int GetMenuMode(Scanner sc){
+    public static int GetMenuMode(Scanner sc, boolean debug){
         try{
             System.out.println("1-View Salesman\n2-Add Salesman\n3-Remove Salesman\n4-Salesman Data Overview\n");
             int buffer_mode = 0;
@@ -25,12 +25,14 @@ public class SalesManaging {
             return buffer_mode;
         }
         finally{
+            if(debug==true){
             System.out.println("\nMode Captured\n");
+            }
         }
     }
 
     //view a salesman 
-    public static void ViewSalesman(ArrayList<String> names_list,ArrayList<Integer> sales_list, String name){
+    public static void ViewSalesman(ArrayList<String> names_list,ArrayList<Integer> sales_list, String name, boolean debug){
         try{
             //create a string and parse through the for loop until the name is hit and print the data out while updating if it is found via the temp boolean
             String list_data_chosen = "";
@@ -51,13 +53,15 @@ public class SalesManaging {
             
         }
         finally{
-            System.out.println("Viewed Salesman");
+            if(debug==true){
+                System.out.println("Viewed Salesman");
+            }
         }
 
     }
 
     //add a salesman by going through and adding a name and it's earning and amd adding it to the file
-    public static void AddSalesman(ArrayList<String> names_list,ArrayList<Integer> sales_list, String Name, int Earnings){
+    public static void AddSalesman(ArrayList<String> names_list,ArrayList<Integer> sales_list, String Name, int Earnings,boolean debug){
         try{
             names_list.add(Name);
             sales_list.add(Earnings);
@@ -69,16 +73,18 @@ public class SalesManaging {
             e.printStackTrace();
         }
         finally{
+            if(debug==true){
             System.out.println("Added New SalesPerson!");
+            }
         }
     }
 
     //remove a salesman by going to the Remove from file function
-    public static void RemoveSalesman(ArrayList<String> names, ArrayList<Integer> sales, String name, int Earnings){
+    public static void RemoveSalesman(ArrayList<String> names, ArrayList<Integer> sales, String name, int Earnings,boolean debug){
         try{
             for(int i=0;i<names.size();i++){
-                FileManaging.RemoveFromFile.RemoveStrFromFile(names, name, "names.txt");
-                FileManaging.RemoveFromFile.RemoveIntFromFile(sales,Earnings,"sales.txt");
+                FileManaging.RemoveFromFile.RemoveStrFromFile(names, name, "names.txt",debug);
+                FileManaging.RemoveFromFile.RemoveIntFromFile(sales,Earnings,"sales.txt",debug);
             }
         }
         catch(Exception e){
@@ -86,7 +92,9 @@ public class SalesManaging {
             e.printStackTrace();
         }
         finally{
-            System.out.println("Removed a salesman");
+            if(debug==true){
+                System.out.println("Removed a salesman");
+            }
         }
     }
     
