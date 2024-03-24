@@ -6,7 +6,6 @@ import DataManagement.DataManager;
 
 //imported libs
 import java.util.*;
-
 //FINISHED PROJECT?
 public class Main{
     //debug
