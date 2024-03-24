@@ -1,7 +1,7 @@
 - [Description](#Salesman)
 - [Status](#status)
 - [Prerequisites](#prerequisites)
-- [Usage](#usage)
+- [Details](#details)
 - [Linux/Mac](#command-to-runubuntulinux)
 - [Settings](#change-settings)
 - [Performance](#performance)
@@ -15,11 +15,12 @@ An advanced java program that allows you to remove,add, view and see the various
 Java JDK/SDK
 - Computer CPU >400mhz
 - RAM >1000MB
-# Usage
-Simply run the program and see what to do via the menu with the 4 options, the largest amount of time being dedicated to data anylitics. **HOWEVER.The normal text file can be increased from 1000 names to 100,000 names (That's when it get's slow)**
-## Command to Run(Ubuntu/Linux)
+# Running A Package
+In the package you should see a zip file. After decompression, you can run the command java Main directly in the directory to run the compiled instance of the program.
+This Program is not to be compiled, doing so will cause errors. You must go to the packages section or download it from source to do so.
+# Command to Run(Ubuntu/Linux)
 ```
-Java -jar Main.java
+Java Main
 ```
 ## Change Settings
 Find the Debug variable in Main.java and change it
