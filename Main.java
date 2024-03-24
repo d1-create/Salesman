@@ -51,11 +51,5 @@ public class Main{
         }
         
         input.close();
-        //todo IN ORDER OF IMPORTANCE:
-        /*
-         * ALLOW USER TO ENTER IF THEY WANT TO SEE THE MIN,AVG,MAX SALESMAN AND VALUES (BEING DONE)
-         * COMMENTS
-         * READABILITY
-         */
     }
 }
