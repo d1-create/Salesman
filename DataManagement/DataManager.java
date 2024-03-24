@@ -177,8 +177,9 @@ public class DataManager {
                 mean = Math.round(mean);
                 mean = Math.round(standard_deviation);
                 System.out.println("The Standard Deviation is: " + standard_deviation + " And the mean is: " + mean);
-                if(debug==true){}
+                if(debug==true){
                     System.out.println(". This means that 68% of all values lie between " + (mean-standard_deviation) + " and " + (mean+standard_deviation));
+                }
             }
         }
     }

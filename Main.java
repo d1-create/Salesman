@@ -8,7 +8,7 @@ import DataManagement.DataManager;
 import java.util.*;
 public class Main{
     //debug
-    public static boolean debug = true;
+    public static boolean debug = false;
     //global variables
     public static ArrayList<String> names_arr = new ArrayList<String>(); //list of names updated from file
     public static ArrayList<Integer> sales_arr = new ArrayList<Integer>();//list of sales updated from file
