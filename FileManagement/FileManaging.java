@@ -10,19 +10,25 @@ import java.util.Scanner;
 public class FileManaging {
     
     //on startup check for files and make them if not there
-    public static void Startup(){
+    public static void Startup(boolean debug){
 
         try{
             File Names = new File("names.txt");
             File Sales = new File("sales.txt");
             if(Names.createNewFile()){
-                System.out.println("Created names.txt");
+                if(debug==true){
+                    System.out.println("Created names.txt");
+                }
             }
             else if(Sales.createNewFile()){
+                if(debug==true){
                 System.out.println("Created sales.txt");
+                }
             }
             else{
+                if(debug==true){
                 System.out.println("All necessary Files Exist - EXITING STARTUP TO MAIN PROGRAM");
+                }
             }
         }
         
@@ -31,13 +37,13 @@ public class FileManaging {
             e.printStackTrace();
         }
         finally{
-            System.out.println("System Startup Completed Sucessfully");
+            System.out.println("System Startup Completed Sucessfully!");
         }
     }
     //class with both functions to read a file into a list
     public class ReadToFile{
         //read file to an arraylist of strings
-        public static void ReadFileToStringArr(String path, ArrayList<String> StringList){
+        public static void ReadFileToStringArr(String path, ArrayList<String> StringList, boolean debug){
             try{
                 File Data = new File(path);
 
@@ -53,12 +59,14 @@ public class FileManaging {
                 e.printStackTrace();
             }
             finally{
-                System.out.println("Read file to Arraylist (type string)");
+                if(debug == true){
+                    System.out.println("Read file to Arraylist (type string)");
+                }
             }
         }
 
         //read file to arraylist of integers
-        public static void ReadFileToIntegerArr(String path, ArrayList<Integer> IntList){
+        public static void ReadFileToIntegerArr(String path, ArrayList<Integer> IntList, boolean debug){
         try{
             File Data = new File(path);
 
@@ -74,7 +82,9 @@ public class FileManaging {
             e.printStackTrace();
         }
         finally{
-            System.out.println("Read file to Arraylist (type integer)");
+            if(debug == true){
+                System.out.println("Read file to Arraylist (type integer)");
+            }
         }
     }
 
@@ -132,8 +142,10 @@ public class FileManaging {
             return return_value;
         }
         //remove a string value from a file - TESTED WORKING
-        public static void RemoveStrFromFile(ArrayList<String> arraystr, String name, String path){
+        public static void RemoveStrFromFile(ArrayList<String> arraystr, String name, String path,boolean debug){
+            if(debug==true){
             System.out.println("Starting File Insertion Removal");
+            }
             try{
                 File file = new File(path);
                 FileWriter Writer = new FileWriter(file, false);
@@ -157,12 +169,16 @@ public class FileManaging {
                 System.out.println("Something went wrong - most likely an IOException");
                 e.printStackTrace();
             }
-            System.out.println("Ended File Removal Insertion");
+            if(debug==true){
+                System.out.println("Ended File Removal Insertion");
+            }
 
         }
 
-        public static void RemoveIntFromFile(ArrayList<Integer> arrayint, int value, String path){
-            System.out.println("Starting File Insertion Removal");
+        public static void RemoveIntFromFile(ArrayList<Integer> arrayint, int value, String path,boolean debug){
+            if(debug==true){
+                System.out.println("Starting File Insertion Removal");
+            }
             try{
                 File file = new File(path);
                 FileWriter Writer = new FileWriter(file, false);
@@ -186,12 +202,16 @@ public class FileManaging {
                 System.out.println("Something went wrong - most likely an IOException");
                 e.printStackTrace();
             }
-            System.out.println("Ending File Insertion Removal");
+            if(debug==true){
+                System.out.println("Ending File Insertion Removal");
+            }
         }
 
         //remove integer from file using the index
-        public static void RemoveIntFromFileUIndex(ArrayList<Integer> arrayint, int index, String path){
+        public static void RemoveIntFromFileUIndex(ArrayList<Integer> arrayint, int index, String path,boolean debug){
+            if(debug==true){
             System.out.println("Starting File Insertion Removal");
+            }
             try{
                 File file = new File(path);
                 FileWriter Writer = new FileWriter(file, false);
@@ -215,7 +235,9 @@ public class FileManaging {
                 System.out.println("Something went wrong - most likely an IOException");
                 e.printStackTrace();
             }
+            if(debug==true){
             System.out.println("Ending File Insertion Removal");
+            }
         }
     }
 }
