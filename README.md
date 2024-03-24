@@ -1,7 +1,9 @@
-- [Description](#pycoinflipper)
+- [Description](#Salesman)
+- [Status](#status)
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
-- [Settings](#settings)
+- [Linux/Mac](#command-to-runubuntulinux)
+- [Settings](#change-settings)
 - [Performance](#performance)
 
 
