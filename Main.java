@@ -45,7 +45,7 @@ public class Main{
         }
         //get data and graphs from the whole of the sales database
         else if(mode==4){
-            DataManager.DoAll(sales_arr, names_arr);
+            DataManager.DoAll(sales_arr, names_arr,debug);
         }
         
         input.close();

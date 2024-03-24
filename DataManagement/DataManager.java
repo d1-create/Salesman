@@ -4,21 +4,21 @@ import java.util.ArrayList;
 
 public class DataManager {
     //do all functions
-    public static void DoAll(ArrayList<Integer> sales, ArrayList<String> names){
-        BasicFormulae.AllBasicForm(sales,names);
-        AdvancedFormulae.AdvancedAll(sales, names);
+    public static void DoAll(ArrayList<Integer> sales, ArrayList<String> names, boolean debug){
+        BasicFormulae.AllBasicForm(sales,names,debug);
+        AdvancedFormulae.AdvancedAll(sales, names,debug);
     }
     //basic min,max,avg - range (not median) formulas
     public class BasicFormulae{
         //functino to do all of the basic formale class functions
-        public static void AllBasicForm(ArrayList<Integer> sales, ArrayList<String> names){
-            Average(sales);
+        public static void AllBasicForm(ArrayList<Integer> sales, ArrayList<String> names, boolean debug){
+            Average(sales,debug);
             Smallest(names, sales);
             Highest(names, sales);
             Range(sales);
         }
         //function to get average of sales
-        public static void Average(ArrayList<Integer> sales){
+        public static void Average(ArrayList<Integer> sales, boolean debug){
             int sum = 0;
             try{
                 for(int i=0;i<sales.size();i++){
@@ -31,7 +31,10 @@ public class DataManager {
                 e.printStackTrace();
             }
             finally{
-                System.out.println("Calculated Average For Sales People\n Average:£" + sum);
+                if(debug==true){
+                    System.out.println("Calculated Average Sales");
+                }
+                System.out.println("\n Average:£" + sum);
             }
         }
 
@@ -114,12 +117,12 @@ public class DataManager {
     //Advanced formulas such as spearmans rank and standard deviation
     public class AdvancedFormulae{
         //Do all Advanced Formulae formulas and prin all of it out
-        public static void AdvancedAll(ArrayList<Integer> sales, ArrayList<String> names){
+        public static void AdvancedAll(ArrayList<Integer> sales, ArrayList<String> names, boolean debug){
             CumFreq(sales, false);
-            StandardDeviation(sales);
+            StandardDeviation(sales,debug);
         }
 
-        public static ArrayList<Integer> CumFreq(ArrayList<Integer> sales, boolean ReturnOnly){
+        public static ArrayList<Integer> CumFreq(ArrayList<Integer> sales, boolean debug){
             ArrayList<Integer> SortedList = new ArrayList<Integer>();
             int sum = 0;
             try{
@@ -133,7 +136,7 @@ public class DataManager {
                 e.printStackTrace();
             }
             finally{
-                if(ReturnOnly){
+                if(debug){
                     System.out.println("Below will show you the cumulative frequency");
                     for(int i=0; i<SortedList.size();i++){
                         System.out.print(SortedList.get(i) +",");
@@ -144,7 +147,7 @@ public class DataManager {
         }
 
         //Checked and tested standard Deviation Function
-        public static void StandardDeviation(ArrayList<Integer> sales){
+        public static void StandardDeviation(ArrayList<Integer> sales,boolean debug){
             double standard_deviation = 0.0;
             double mean = 0.0;
             try{
@@ -173,8 +176,9 @@ public class DataManager {
             finally{
                 mean = Math.round(mean);
                 mean = Math.round(standard_deviation);
-                System.out.println("The Standard Deviation is: " + standard_deviation + " And the mean is: " + mean +
-                ". This means that 68% of all values lie between " + (mean-standard_deviation) + " and " + (mean+standard_deviation));
+                System.out.println("The Standard Deviation is: " + standard_deviation + " And the mean is: " + mean);
+                if(debug==true){}
+                    System.out.println(". This means that 68% of all values lie between " + (mean-standard_deviation) + " and " + (mean+standard_deviation));
             }
         }
     }
