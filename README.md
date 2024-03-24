@@ -1,7 +1,7 @@
 - [Description](#Salesman)
 - [Status](#status)
 - [Prerequisites](#prerequisites)
-- [Details](#details)
+- [Running/Compiling](#running-a-package)
 - [Linux/Mac](#command-to-runubuntulinux)
 - [Settings](#change-settings)
 - [Performance](#performance)
