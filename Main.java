@@ -7,7 +7,8 @@ import DataManagement.DataManager;
 //imported libs
 import java.util.*;
 public class Main{
-
+    //debug
+    public static boolean debug = true;
     //global variables
     public static ArrayList<String> names_arr = new ArrayList<String>(); //list of names updated from file
     public static ArrayList<Integer> sales_arr = new ArrayList<Integer>();//list of sales updated from file
@@ -22,18 +23,18 @@ public class Main{
 
         //view salesman mode via the arrays
         if(mode==1){
-            String name = BasicFunc.GetInput.getStringInput("Salesman Name: ", input);
+            String name = BasicFunc.GetInput.getStringInput("Salesman Name: ", input,debug);
             SalesManaging.ViewSalesman(names_arr, sales_arr, name);
         }
         //Add salesman to file and list
         else if(mode==2){
-            String Salesname = BasicFunc.GetInput.getStringInput("Salesman Name:", input);
-            int Sales = BasicFunc.GetInput.getIntInput("Money Made:", input);
+            String Salesname = BasicFunc.GetInput.getStringInput("Salesman Name:", input,debug);
+            int Sales = BasicFunc.GetInput.getIntInput("Money Made:", input,debug);
             SalesManaging.AddSalesman(names_arr, sales_arr, Salesname, Sales);
         }
         //Remove salesman to file and list and then reconstruct the lists with new information
         else if(mode==3){
-            String Salesman = BasicFunc.GetInput.getStringInput("What salesman to remove from the list?", input);
+            String Salesman = BasicFunc.GetInput.getStringInput("What salesman to remove from the list?", input,debug);
             int index = FileManaging.RemoveFromFile.GetIndexStrArr(Salesman, names_arr);
             SalesManaging.RemoveSalesman(names_arr, sales_arr, Salesman, mode);
             FileManaging.RemoveFromFile.RemoveIntFromFileUIndex(sales_arr, index, "sales.txt");
