@@ -8,7 +8,7 @@
 
 
 # Status
-Nearly finished, im not sure if i will inplement java graphs and diagrams,
+Finished! After removing graph GUI's for another project i have finally finished this one!
 # Salesman
 An advanced java program that allows you to remove,add, view and see the various data analytics of some salesmen.
 # Prerequisites
