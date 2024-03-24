@@ -17,7 +17,7 @@ Java JDK/SDK
 - RAM >1000MB
 # Running A Package
 In the package you should see a zip file. After decompression, you can run the command java Main directly in the directory to run the compiled instance of the program.
-This Program is not to be compiled, doing so will cause errors. You must go to the packages section or download it from source to do so.
+**This Program is not to be compiled, doing so will cause errors. You must go to the packages section or download it from source to do so.**
 # Command to Run(Ubuntu/Linux)
 ```
 Java Main
