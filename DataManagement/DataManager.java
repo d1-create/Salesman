@@ -183,8 +183,4 @@ public class DataManager {
             }
         }
     }
-    //make graphs and formulas to visualise them (GUI?)
-    public class Graphs{
-
-    }
 }
