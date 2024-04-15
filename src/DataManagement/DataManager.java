@@ -185,4 +185,9 @@ public class DataManager {
             }
         }
     }
+
+    public class Graph_GUI {
+        
+        
+    }
 }
