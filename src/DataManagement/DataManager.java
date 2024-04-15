@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 public class DataManager {
-    //do all functions
+    //do all functions except for graphs and GUI
     public static void DoAll(ArrayList<Integer> sales, ArrayList<String> names, boolean debug){
         BasicFormulae.AllBasicForm(sales,names,debug);
         AdvancedFormulae.AdvancedAll(sales, names,debug);
@@ -14,19 +14,20 @@ public class DataManager {
     public class BasicFormulae{
         //functino to do all of the basic formale class functions
         public static void AllBasicForm(ArrayList<Integer> sales, ArrayList<String> names, boolean debug){
-            Average(sales,debug);
+            float avg = Average(sales,debug);
             Smallest(names, sales);
             Highest(names, sales);
             Range(sales);
         }
         //function to get average of sales
-        public static void Average(ArrayList<Integer> sales, boolean debug){
+        public static float Average(ArrayList<Integer> sales, boolean debug){
             int sum = 0;
+            float average = 0;
             try{
                 for(int i=0;i<sales.size();i++){
                     sum+=sales.get(i);
                 }
-                sum = (sum/sales.size());
+                average = (sum/sales.size());
             }
             catch(Exception e){
                 System.out.println("Error occured during arithmetic loop operation");
@@ -38,7 +39,9 @@ public class DataManager {
                 }
                 System.out.println("\n Average:£" + sum);
             }
+            return average;
         }
+        
 
         //function to get smallest value and print the smallest earner
         public static void Smallest(ArrayList<String> names,ArrayList<Integer> sales){
@@ -120,7 +123,7 @@ public class DataManager {
     public class AdvancedFormulae{
         //Do all Advanced Formulae formulas and prin all of it out
         public static void AdvancedAll(ArrayList<Integer> sales, ArrayList<String> names, boolean debug){
-            CumFreq(sales, false);
+            CumFreq(sales, debug);
             StandardDeviation(sales,debug);
         }
 
@@ -187,7 +190,9 @@ public class DataManager {
     }
 
     public class Graph_GUI {
-        
+        public static void SeeAllGraphs(ArrayList<Integer> Sales){
+            float average = BasicFormulae.Average(Sales, false);
+        }
         
     }
 }

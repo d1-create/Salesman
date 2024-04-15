@@ -10,7 +10,7 @@ public class SalesManaging {
     //get the menu mode from this function
     public static int GetMenuMode(Scanner sc, boolean debug){
         try{
-            System.out.println("1-View Salesman\n2-Add Salesman\n3-Remove Salesman\n4-Salesman Data Overview\n");
+            System.out.println("1-View Salesman\n2-Add Salesman\n3-Remove Salesman\n4-Salesman Data Overview\n5-See Graph(GUI)");
             int buffer_mode = 0;
 
             System.out.println("Mode must be above 0 and below 5, Enter below");
