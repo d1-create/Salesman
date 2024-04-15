@@ -15,9 +15,9 @@ public class DataManager {
         //functino to do all of the basic formale class functions
         public static void AllBasicForm(ArrayList<Integer> sales, ArrayList<String> names, boolean debug){
             float avg = Average(sales,debug);
-            Smallest(names, sales);
-            Highest(names, sales);
-            Range(sales);
+            int smallest = Smallest(names, sales);
+            int highest = Highest(names, sales);
+            int range = Range(sales);
         }
         //function to get average of sales
         public static float Average(ArrayList<Integer> sales, boolean debug){
@@ -44,7 +44,7 @@ public class DataManager {
         
 
         //function to get smallest value and print the smallest earner
-        public static void Smallest(ArrayList<String> names,ArrayList<Integer> sales){
+        public static int Smallest(ArrayList<String> names,ArrayList<Integer> sales){
             int lowest = 10000000;
             int lowest_index = 0;  
             try{
@@ -68,9 +68,10 @@ public class DataManager {
             finally{
                 System.out.println("The Lowest Earner is: " + names.get(lowest_index) + ", They made:£" + lowest);
             }
+            return lowest;
         }
         //function to get the highest value and print the highest earner
-        public static void Highest(ArrayList<String> names,ArrayList<Integer> sales){
+        public static int Highest(ArrayList<String> names,ArrayList<Integer> sales){
             int highest = 0;
             int highest_index = 0;
             try{
@@ -92,9 +93,10 @@ public class DataManager {
             finally{
                 System.out.println("The Highest money bringer is:" + names.get(highest_index) + ", who made:£" + highest);
             }
+            return highest;
         }
         //get the range of values and print it out
-        public static void Range(ArrayList<Integer> sales){
+        public static int Range(ArrayList<Integer> sales){
             int highest = 0;
             int lowest = 100000000;
             try{
@@ -116,6 +118,7 @@ public class DataManager {
                 finally{
                     System.out.println("The Range of values is:£" + (highest-lowest));
             }
+            return (highest-lowest);
         
         }
     }
