@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="xchart-3.8.7" scope="PROVIDED"/>
+	<levels>
+		<level name="xchart-3.8.7" value="project"/>
+	</levels>
+</component>
