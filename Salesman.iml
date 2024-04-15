@@ -7,5 +7,56 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/lib/JChart" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="file://$MODULE_DIR$/lib/JChart/javadoc" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/BarChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/BarChart3D/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/BubbleChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/CandlestickChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/CarGauges/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/Clock/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/CustomData/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/Dashboard/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/Functions/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/FunnelChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/GroupLabels/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/Interactivity/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/LineChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/MultipleAxes/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/RadarChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/ResourceMonitor/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/ScriptedSeries/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/StackedBarChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples.intellij/TowerChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/BarChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/BarChart3D/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/BubbleChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/CandlestickChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/CarGauges/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/Clock/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/CustomData/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/Dashboard/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/Functions/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/FunnelChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/GroupLabels/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/Interactivity/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/LineChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/MultipleAxes/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/RadarChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/ResourceMonitor/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/ScriptedSeries/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/StackedBarChart/src" />
+          <root url="file://$MODULE_DIR$/lib/JChart/samples/TowerChart/src" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/lib/JChart" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

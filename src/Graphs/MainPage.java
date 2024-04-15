@@ -1,5 +1,8 @@
 package Graphs;
 
+import DataManagement.DataManager;
+import com.sun.tools.javac.Main;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -69,7 +72,7 @@ public class MainPage implements ActionListener {
     //create new windows if the buttons are pressed, with the text on them showing what button to press
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == StandardDeviation){
-            StandardGraph standardGraph = new StandardGraph();
+            StandardGraph standardGraph = new StandardGraph(DataManager.AdvancedFormulae.StandardDeviation(Data.Data.GetSales(),Data.Data.GetDebug()),Data.Data.GetSales());
         }
         if(event.getSource() == AveragesGraphButton){
             AveragesGraph averagesGraph = new AveragesGraph();
