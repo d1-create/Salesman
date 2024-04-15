@@ -11,7 +11,7 @@ public class DataManager {
         AdvancedFormulae.AdvancedAll(sales, names,debug);
     }
     //basic min,max,avg - range (not median) formulas
-    public class BasicFormulae{
+    public static class BasicFormulae{
         //functino to do all of the basic formale class functions
         public static void AllBasicForm(ArrayList<Integer> sales, ArrayList<String> names, boolean debug){
             float avg = Average(sales,debug);
@@ -123,7 +123,7 @@ public class DataManager {
         }
     }
     //Advanced formulas such as spearmans rank and standard deviation
-    public class AdvancedFormulae{
+    public static class AdvancedFormulae{
         //Do all Advanced Formulae formulas and prin all of it out
         public static void AdvancedAll(ArrayList<Integer> sales, ArrayList<String> names, boolean debug){
             CumFreq(sales, debug);
@@ -193,15 +193,4 @@ public class DataManager {
         }
     }
 
-    public class Graph_GUI {
-        public static void SeeAllGraphs(ArrayList<Integer> Sales, boolean debug){
-            float average = BasicFormulae.Average(Sales, debug);
-            double standard_deviation = AdvancedFormulae.StandardDeviation(Sales, debug);
-            ArrayList<Integer> CumFreq = AdvancedFormulae.CumFreq(Sales, debug);
-        }
-        
-        public static void CumulativeGraph(ArrayList<Integer> cumulative_frequency, float mean){
-            NewWindow cumulative_frequency = new NewWindow();
-        }
     }
-}

@@ -48,6 +48,9 @@ public class Main{
         else if(mode==4){
             DataManager.DoAll(sales_arr, names_arr,debug);
         }
+        else if(mode==5){
+            Graphs.MainGraph.SeeAllGraphs(sales_arr,debug);
+        }
         
         input.close();
     }

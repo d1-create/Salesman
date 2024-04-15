@@ -13,12 +13,12 @@ public class SalesManaging {
             System.out.println("1-View Salesman\n2-Add Salesman\n3-Remove Salesman\n4-Salesman Data Overview\n5-See Graph(GUI)");
             int buffer_mode = 0;
 
-            System.out.println("Mode must be above 0 and below 5, Enter below");
+            System.out.println("Mode must be above 0 and below 6, Enter below");
             if(sc.hasNextInt()){
                 buffer_mode = sc.nextInt();
             }
 
-            if(buffer_mode>4 || buffer_mode<1){
+            if(buffer_mode>5 || buffer_mode<1){
                 System.out.println("MODE OUT OF BOUNDS, QUITTING APPLICATION");
                 System.exit(0);
             }
