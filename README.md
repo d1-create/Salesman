@@ -8,7 +8,7 @@
 
 
 # Status
-Finished! After removing graph GUI's for another project i have finally finished this one!
+Broken, I tried the GUI and the project had the wrong filestructure that wasn't meant for scaling. The GUI displays one graph that doesn't work but the CLI features are working perfectly, making 4/5 modes work while the last one to visualise the data is not working.
 # Salesman
 An advanced java program that allows you to remove,add, view and see the various data analytics of some salesmen.
 # Prerequisites
