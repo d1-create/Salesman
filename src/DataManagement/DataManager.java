@@ -150,27 +150,27 @@ public class DataManager {
         }
 
         //Checked and tested standard Deviation Function
-        public static double StandardDeviation(ArrayList<Integer> sales,boolean debug){
-            double standard_deviation = 0.0;
-            double mean = 0.0;
+        public static float StandardDeviation(ArrayList<Integer> sales,boolean debug){
+            float standard_deviation = 0.0F;
+            float mean = 0.0F;
             try{
                 //create average
-                double num_values = sales.size();
-                double sum = 0;
+                float num_values = sales.size();
+                float sum = 0F;
                 for(int i=0;i<sales.size();i++){
                     sum+=sales.get(i);
                 }
                 mean = (sum/num_values);
                 //get variance
-                double variance = 0.0;
-                double variance_sum_var = 0.0;
+                float variance = 0.0F;
+                float variance_sum_var = 0.0F;
                 for(int i=0;i<sales.size();i++){
-                    double a = (sales.get(i) - mean);
-                    a = Math.pow(a, 2);
+                    float a = (sales.get(i) - mean);
+                    a = (float) Math.pow(a, 2);
                     variance_sum_var+=a;
                 }
                 variance = (variance_sum_var/num_values);
-                standard_deviation = Math.sqrt(variance);
+                standard_deviation = (float) Math.sqrt(variance);
             }
             catch(Exception e){
                 System.out.println("Below find an error relatedf to the standard deviation formula");

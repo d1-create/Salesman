@@ -16,17 +16,17 @@ public class FileManaging {
             File Names = new File("names.txt");
             File Sales = new File("sales.txt");
             if(Names.createNewFile()){
-                if(debug==true){
+                if(debug){
                     System.out.println("Created names.txt");
                 }
             }
             else if(Sales.createNewFile()){
-                if(debug==true){
+                if(debug){
                 System.out.println("Created sales.txt");
                 }
             }
             else{
-                if(debug==true){
+                if(debug){
                 System.out.println("All necessary Files Exist - EXITING STARTUP TO MAIN PROGRAM");
                 }
             }
@@ -59,7 +59,7 @@ public class FileManaging {
                 e.printStackTrace();
             }
             finally{
-                if(debug == true){
+                if(debug){
                     System.out.println("Read file to Arraylist (type string)");
                 }
             }
@@ -73,7 +73,9 @@ public class FileManaging {
             Scanner FileScanner = new Scanner(Data);
             while (FileScanner.hasNextLine()) {
                 String buffer = FileScanner.nextLine();
-                IntList.add(Integer.parseInt(buffer));
+                if(buffer != ""){
+                    IntList.add(Integer.parseInt(buffer));
+                }
             }
             FileScanner.close();
         }
@@ -82,7 +84,7 @@ public class FileManaging {
             e.printStackTrace();
         }
         finally{
-            if(debug == true){
+            if(debug){
                 System.out.println("Read file to Arraylist (type integer)");
             }
         }
@@ -143,7 +145,7 @@ public class FileManaging {
         }
         //remove a string value from a file - TESTED WORKING
         public static void RemoveStrFromFile(ArrayList<String> arraystr, String name, String path,boolean debug){
-            if(debug==true){
+            if(debug){
             System.out.println("Starting File Insertion Removal");
             }
             try{
@@ -156,7 +158,6 @@ public class FileManaging {
                 for(int i=0;i<arraystr.size();i++){
                     temp_buffer = arraystr.get(i);
                     if(temp_buffer.equals(name)){
-                        ;
                     }
                     else{
                         NewWriter.append(temp_buffer + "\n");
@@ -169,14 +170,14 @@ public class FileManaging {
                 System.out.println("Something went wrong - most likely an IOException");
                 e.printStackTrace();
             }
-            if(debug==true){
+            if(debug){
                 System.out.println("Ended File Removal Insertion");
             }
 
         }
 
         public static void RemoveIntFromFile(ArrayList<Integer> arrayint, int value, String path,boolean debug){
-            if(debug==true){
+            if(debug){
                 System.out.println("Starting File Insertion Removal");
             }
             try{
@@ -189,7 +190,6 @@ public class FileManaging {
                 for(int i=0;i<arrayint.size();i++){
                     temp_buffer = arrayint.get(i);
                     if(temp_buffer == value){
-                        ;
                     }
                     else{
                         NewWriter.append(temp_buffer + "\n");
@@ -202,14 +202,14 @@ public class FileManaging {
                 System.out.println("Something went wrong - most likely an IOException");
                 e.printStackTrace();
             }
-            if(debug==true){
+            if(debug){
                 System.out.println("Ending File Insertion Removal");
             }
         }
 
         //remove integer from file using the index
         public static void RemoveIntFromFileUIndex(ArrayList<Integer> arrayint, int index, String path,boolean debug){
-            if(debug==true){
+            if(debug){
             System.out.println("Starting File Insertion Removal");
             }
             try{
@@ -222,7 +222,6 @@ public class FileManaging {
                 for(int i=0;i<arrayint.size();i++){
                     temp_buffer = arrayint.get(i);
                     if(temp_buffer == arrayint.get(index)){
-                        ;
                     }
                     else{
                         NewWriter.append(temp_buffer + "\n");
@@ -235,7 +234,7 @@ public class FileManaging {
                 System.out.println("Something went wrong - most likely an IOException");
                 e.printStackTrace();
             }
-            if(debug==true){
+            if(debug){
             System.out.println("Ending File Insertion Removal");
             }
         }
