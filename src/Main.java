@@ -49,7 +49,7 @@ public class Main{
             DataManager.DoAll(sales_arr, names_arr,debug);
         }
         else if(mode==5){
-            Graphs.MainGraph.SeeAllGraphs(sales_arr,debug);
+            Graphs.MainGraph.StartGUI(debug);
         }
         
         input.close();

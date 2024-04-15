@@ -1,7 +1,5 @@
 package DataManagement;
 
-import java.awt.*;
-import javax.swing.*;
 import java.util.ArrayList;
 
 public class DataManager {
@@ -14,10 +12,10 @@ public class DataManager {
     public static class BasicFormulae{
         //functino to do all of the basic formale class functions
         public static void AllBasicForm(ArrayList<Integer> sales, ArrayList<String> names, boolean debug){
-            float avg = Average(sales,debug);
-            int smallest = Smallest(names, sales);
-            int highest = Highest(names, sales);
-            int range = Range(sales);
+            Average(sales,debug);
+            Smallest(names, sales);
+            Highest(names, sales);
+            Range(sales);
         }
         //function to get average of sales
         public static float Average(ArrayList<Integer> sales, boolean debug){
@@ -27,14 +25,14 @@ public class DataManager {
                 for(int i=0;i<sales.size();i++){
                     sum+=sales.get(i);
                 }
-                average = (sum/sales.size());
+                average = ((float) sum /sales.size());
             }
             catch(Exception e){
                 System.out.println("Error occured during arithmetic loop operation");
                 e.printStackTrace();
             }
             finally{
-                if(debug==true){
+                if(debug){
                     System.out.println("Calculated Average Sales");
                 }
                 System.out.println("\n Average:£" + sum);
@@ -43,7 +41,7 @@ public class DataManager {
         }
         
 
-        //function to get smallest value and print the smallest earner
+        //function to get the smallest value and print the smallest earner
         public static int Smallest(ArrayList<String> names,ArrayList<Integer> sales){
             int lowest = 10000000;
             int lowest_index = 0;  
@@ -54,9 +52,6 @@ public class DataManager {
                     if(sales_value_temp_var < lowest){
                         lowest = sales_value_temp_var;
                         lowest_index = i;
-                    }
-                    else{
-                        ;
                     }
                 }
 
