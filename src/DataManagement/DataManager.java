@@ -155,7 +155,7 @@ public class DataManager {
         }
 
         //Checked and tested standard Deviation Function
-        public static void StandardDeviation(ArrayList<Integer> sales,boolean debug){
+        public static double StandardDeviation(ArrayList<Integer> sales,boolean debug){
             double standard_deviation = 0.0;
             double mean = 0.0;
             try{
@@ -189,13 +189,19 @@ public class DataManager {
                     System.out.println(". This means that 68% of all values lie between " + (mean-standard_deviation) + " and " + (mean+standard_deviation));
                 }
             }
+            return standard_deviation;
         }
     }
 
     public class Graph_GUI {
-        public static void SeeAllGraphs(ArrayList<Integer> Sales){
-            float average = BasicFormulae.Average(Sales, false);
+        public static void SeeAllGraphs(ArrayList<Integer> Sales, boolean debug){
+            float average = BasicFormulae.Average(Sales, debug);
+            double standard_deviation = AdvancedFormulae.StandardDeviation(Sales, debug);
+            ArrayList<Integer> CumFreq = AdvancedFormulae.CumFreq(Sales, debug);
         }
         
+        public static void CumulativeGraph(ArrayList<Integer> cumulative_frequency, float mean){
+            NewWindow cumulative_frequency = new NewWindow();
+        }
     }
 }
